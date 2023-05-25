@@ -6,7 +6,7 @@ module purge
 set -x
 
 export WORKDIR=/scratch/$USER/$SLURM_JOBID 
-mkdir -p WORKDIR
+mkdir -p $WORKDIR
 
 # Set working directory to home directory
 cd $WORKDIR
