@@ -104,9 +104,9 @@ Edit `form.yml` and update these values for your cluster:
 | `bc_num_cores` | Number of cores | user-defined; default `1` | Your preferred default number of cores |
 | `bc_queue` | Default scheduler partition | user-defined; default: `shared` | Your preferred partition |
 | `extra_slurm` | Extra slurm option (long-format) | user-defined | Remove if using aother scheduler |
-| `custom_num_gpus` | Number of GPUs | user-defined; default `1` | Your preferred default number of GPUs |
+| `custom_num_gpus` | Number of GPUs | user-defined; default `0` | Your preferred default number of GPUs |
 | `memory` | Memory per job (GB) | user-defined; default: `4` | Your preferredmemory allocation |
-| `modules` | Module to load on compute node | `sas/9.4-fasrc01` | Your `sas` module |
+| `sas_version` | SAS module to load on compute node | `sas/9.4-fasrc01` | Your `sas` module |
 
 #### `manifest.yml` attributes
 
@@ -148,7 +148,7 @@ that the compute node can open the required port.
 
 | Site | OOD Version | Scheduler | Status |
 |------|-------------|-----------|--------|
-| FASRC | 3.1 | Slurm 23.02 | Tested |
+| FASRC | 3.1 | Slurm 25.11 | Tested |
 | FASRC | 4.0 | Slurm 25.11 | Tested |
 
 <!-- How can a deployer verify it works? -->
