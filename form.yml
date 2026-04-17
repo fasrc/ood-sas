@@ -89,9 +89,9 @@ form:
   - custom_num_cores
   - custom_num_gpus
   - custom_time
+  - sas_version
   - custom_email_address
   - bc_email_on_started
   - custom_reservation
   - bc_account
   - extra_slurm
-  - sas_version
