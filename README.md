@@ -97,12 +97,12 @@ git checkout v1.0.0
 
 Edit `form.yml` and update these values for your cluster:
 
-| Attribute | Description | FASRC setting | Change to |
+| Attribute | Description | FASRC settings | Change to |
 |-----------|-------------|---------| -----------|
 | `cluster` | Target cluster ID | `odyssey` | Your cluster name |
-| `bc_num_hours` | Maximum wall time (HH:MM:SS) | user-defined; default: `04:00:00` | Your preferred default time |
+| `bc_num_hours` | Maximum wall time (HH:MM:SS) | user-defined; default `04:00:00` | Your preferred default time |
 | `bc_num_cores` | Number of cores | user-defined; default `1` | Your preferred default number of cores |
-| `bc_queue` | Default scheduler partition | user-defined; default: `shared` | Your preferred partition |
+| `bc_queue` | Default scheduler partition | user-defined; default `shared` | Your preferred partition |
 | `extra_slurm` | Extra slurm option (long-format) | user-defined | Remove if using aother scheduler |
 | `custom_num_gpus` | Number of GPUs | user-defined; default `0` | Your preferred default number of GPUs |
 | `memory` | Memory per job (GB) | user-defined; default: `4` | Your preferredmemory allocation |
