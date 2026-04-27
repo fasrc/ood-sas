@@ -38,7 +38,13 @@ This app uses the Batch Connect `basic` template with Slurm.
 <!-- A screenshot helps deployers verify their installation and helps users understand what they'll get. -->
 <!-- Place images in a screenshots/ or docs/ directory. -->
 
+SAS after re-organizing windows
+
 ![SAS running in browser](images/sas_desktop.png)
+
+A [SAS plot example](https://documentation.sas.com/doc/en/pgmsascdc/v_072/graphref/n1bwvjnj88q7dzn1014ai2v6a4jq.htm#n1bwvjnj88q7dzn1014ai2v6a4jq)
+
+![SAS plot example](images/sas_plot_example.png)
 
 ## Features
 
