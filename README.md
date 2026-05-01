@@ -164,6 +164,7 @@ that the compute node can open the required port.
 |------|------------------|-------------|-----------|--------|
 | FASRC | Rocky 8.10 | 3.1 | Slurm 25.11 | Tested |
 | FASRC | Rocky 8.10 | 4.0 | Slurm 25.11 | Tested |
+| FASRC | Rocky 8.10 | 4.1 | Slurm 25.11 | Tested |
 
 > [!NOTE]
 > \*Operating system of compute nodes
