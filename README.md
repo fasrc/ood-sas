@@ -28,9 +28,9 @@ desktop session on HPC clusters. It is designed for researchers who need data
 management, advanced analytics, multivariate analysis, business intelligence,
 and predictive analytics.
 
-This app uses the Batch Connect `basic` template with Slurm.
+This app uses the Batch Connect `turbovnc` template with Slurm.
 
-- **Batch Connect template:** `basic`
+- **Batch Connect template:** `turbovnc`
 - **Scheduler:** Slurm
 
 ## Screenshots
@@ -50,21 +50,29 @@ A [SAS plot example](https://documentation.sas.com/doc/en/pgmsascdc/v_072/graphr
 
 <!-- List the key capabilities specific to THIS OOD app (not the upstream software). -->
 
-- Launches SAS via VNC desktop on compute nodes
+- Launches SAS desktop GUI in a TurboVNC session with Xfce window manager
 - Supports CPU and GPU execution
-- Configurable partition, memory, CPU cores, GPU cards, and wall time
-- Additional Slurm options pass-through (long format)
-- Reservation support and optional Slurm account
-- Email notification on job start
 - Lmod module-based
+- Configurable partition, memory, CPU cores, GPU cards, and wall time
+- Optional additional Slurm options pass-through (long format)
+- Optional reservation support for priority scheduling
+- Optional email notification on job start
+- OOM score management to prevent proxy errors on out-of-memory conditions
 
 ## Requirements
 
 ### Compute Node Software
 
 - SAS Lmod module and SAS license
-- Window manager XFCE
-- [Slurm](https://slurm.schedmd.com/) job scheduler
+- [Xfce Desktop](https://xfce.org/) 4+
+- [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod)
+  6.0.1+ or any other `module purge` and `module load <modules>` based CLI used
+  to load appropriate environments within the batch job
+
+### For VNC server support
+
+- [TurboVNC](http://www.turbovnc.org/) 2.1+
+- [websockify](https://github.com/novnc/websockify) 0.8.0+
 
 ### Open OnDemand
 
@@ -177,7 +185,7 @@ To verify your installation:
 
 Contributions are welcome. To contribute:
 
-1. Fork this repository.
+1. [Fork this repository](https://github.com/fasrc/ood-sas/fork).
 2. Create a feature branch (`git checkout -b feature/my-improvement`).
 3. Submit a pull request with a description of your changes.
 
