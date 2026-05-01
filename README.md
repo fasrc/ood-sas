@@ -30,6 +30,7 @@ and predictive analytics.
 
 This app uses the Batch Connect `turbovnc` template with Slurm.
 
+- **Upstream project:** [SAS](https://www.sas.com/en_us/home.html)
 - **Batch Connect template:** `turbovnc`
 - **Scheduler:** Slurm
 
