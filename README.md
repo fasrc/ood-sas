@@ -94,9 +94,6 @@ cd /var/www/ood/apps/sys
 
 git clone https://github.com/fasrc/ood-sas.git
 cd ood-sas
-
-# Pin to a release (recommended)
-git checkout v1.0.0
 ```
 
 ### 2. Configure for your site
