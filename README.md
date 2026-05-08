@@ -117,7 +117,7 @@ Edit `form.yml` and update these values for your cluster:
 | `bc_queue` | Default scheduler partition | user-defined; default `shared` | Your preferred partition |
 | `extra_slurm` | Extra slurm option (long-format) | user-defined | Remove if using aother scheduler |
 | `custom_num_gpus` | Number of GPUs | user-defined; default `0` | Your preferred default number of GPUs |
-| `memory` | Memory per job (GB) | user-defined; default: `4` | Your preferredmemory allocation |
+| `custom_memory_per_node` | Memory per job (GB) | user-defined; default: `4` | Your preferredmemory allocation |
 | `sas_version` | SAS module to load on compute node | `sas/9.4-fasrc01` | Your `sas` module |
 
 #### `manifest.yml` attributes
