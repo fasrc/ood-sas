@@ -49,7 +49,7 @@ attributes:
     value: 0
     min:   0
     step:  1
-    max:   4
+    max:   8
     widget: number_field
     help: "Number of GPUs to allocate. Available only on GPU enabled partitions"
     help: |
@@ -76,7 +76,7 @@ attributes:
       additional slurm options (**long format option only**)<br>
       Example :  --constraint=intel --exclusive
 
-      Please make sure the options you select are compatible with other fields in the form.<br>Also, please make sure you use **long format option only**<br>(e.g. --nodelist=holy7c24502 instead of -w holy7c24502)  
+      Please make sure the options you select are compatible with other fields in the form.<br>Also, please make sure you use **long format option only**<br>(e.g. --nodelist=holy7c24502 instead of -w holy7c24502)
       If you are not familiar with Slurm we recommend to leave this blank.
 
 form:
