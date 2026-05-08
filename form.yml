@@ -32,13 +32,12 @@ attributes:
     value: 4
     min:   4
     step:  1
-    max:   500
     widget: number_field
     help: |
       *sbatch --mem=\<size\>G*
   custom_num_cores:
     label: Number of cores
-    value: 1
+    value: 2
     min:   1
     step:  1
     widget: number_field
@@ -55,6 +54,14 @@ attributes:
     help: "Number of GPUs to allocate. Available only on GPU enabled partitions"
     help: |
       *sbatch --gres=gpu:\<ngpus\>*
+  sas_version:
+    widget: select
+    label: "SAS Version"
+    help: |
+      Loading the Matlab module for requested version
+    options:
+      - ["SAS 9.4", "sas/9.4-fasrc01"]
+
   custom_reservation:
     label: Reservation
     widget: text_field
@@ -81,6 +88,7 @@ form:
   - custom_num_cores
   - custom_num_gpus
   - custom_time
+  - sas_version
   - custom_email_address
   - bc_email_on_started
   - custom_reservation
