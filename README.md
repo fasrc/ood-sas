@@ -128,6 +128,18 @@ appear at the bottom of [form.yml](form.yml)):
 | `bc_account` | **Optional** Slurm account `-A`, `--account` | user-defined | |
 | `extra_slurm` | **Optional** Extra slurm option (long-format) | user-defined | |
 
+#### `submit.yml.erb` attributes
+
+[submit.yml.erb](submit.yml.erb) uses slurm-specific variables. If you use a
+different scheduler, edit these accordingly:
+
+| Slurm variable | `forml.yml` attribute |
+|----------------|-----------------------|
+| `mem` | `custom_memory_per_node` |
+| `time` | `custom_time` |
+| `cpus-per-task` | `custom_num_cores` |
+| `gpus` | `custom_num_gpus` |
+
 #### `manifest.yml` attributes
 
 Edit `manifest.yml` and update these values for your organization:
