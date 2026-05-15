@@ -53,7 +53,7 @@ attributes:
     widget: number_field
     help: "Number of GPUs to allocate. Available only on GPU enabled partitions"
     help: |
-      *sbatch --gres=gpu:\<ngpus\>*
+      *sbatch --gpus:\<ngpus\>*
   sas_version:
     widget: select
     label: "SAS Version"

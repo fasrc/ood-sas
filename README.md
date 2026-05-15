@@ -107,18 +107,38 @@ cd ood-sas
 
 #### `form.yml` attributes
 
-Edit `form.yml` and update these values for your cluster:
+Edit `form.yml` and update these values for your cluster (in order as they
+appear at the bottom of [form.yml](form.yml)):
 
 | Attribute | Description | FASRC settings | Change to |
 |-----------|-------------|---------| -----------|
 | `cluster` | Target cluster ID | `odyssey` | Your cluster name |
-| `bc_num_hours` | Maximum wall time (HH:MM:SS) | user-defined; default `04:00:00` | Your preferred default time |
-| `bc_num_cores` | Number of cores | user-defined; default `1` | Your preferred default number of cores |
+| `desktop` |  | `xfce` | Your desktop implementation |
+| `bc_vnc_resolution` | Screen resolution | user-defined; default 1024x768| Your preferred resolution |
+| `bc_num_slots` | Number of nodes or processors (depending on the type of scheduler) | `Null`, FASRC uses `custom_num_cores` instead | |
 | `bc_queue` | Default scheduler partition | user-defined; default `shared` | Your preferred partition |
-| `extra_slurm` | Extra slurm option (long-format) | user-defined | Remove if using aother scheduler |
+| `custom_memory_per_node` | Memory per job (GB) | user-defined; default: `4` | Your preferred memory allocation |
+| `custom_num_cores` | Number of cores | user-defined; default `2` | Your preferred default number of cores |
 | `custom_num_gpus` | Number of GPUs | user-defined; default `0` | Your preferred default number of GPUs |
-| `custom_memory_per_node` | Memory per job (GB) | user-defined; default: `4` | Your preferredmemory allocation |
+| `custom_time` | Maximum wall time (HH:MM:SS) | user-defined; default `04:00:00` | Your preferred default time |
 | `sas_version` | SAS module to load on compute node | `sas/9.4-fasrc01` | Your `sas` module |
+| `custom_email_address` | **Optional** email address for status notificationl used along with `bc_email_on_started` | user-defined | |
+| `bc_email_on_started` | **Optional** sends email to `custom_email_address` when job starts | user-defined | |
+| `custom_reservation` | **Optional** Slurm reservation `--reservation` | user-defined | |
+| `bc_account` | **Optional** Slurm account `-A`, `--account` | user-defined | |
+| `extra_slurm` | **Optional** Extra slurm option (long-format) | user-defined | |
+
+#### `submit.yml.erb` attributes
+
+[submit.yml.erb](submit.yml.erb) uses slurm-specific variables. If you use a
+different scheduler, edit these accordingly:
+
+| Slurm variable | `forml.yml` attribute |
+|----------------|-----------------------|
+| `mem` | `custom_memory_per_node` |
+| `time` | `custom_time` |
+| `cpus-per-task` | `custom_num_cores` |
+| `gpus` | `custom_num_gpus` |
 
 #### `manifest.yml` attributes
 
@@ -206,7 +226,7 @@ This app is part of the [OOD Appverse](https://ondemand.connectci.org/affinity-g
 
 ## License
 
-[MIT License](LICENSE).
+[MIT License](LICENSE.txt).
 
 ## Acknowledgments
 
