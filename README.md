@@ -226,7 +226,7 @@ This app is part of the [OOD Appverse](https://ondemand.connectci.org/affinity-g
 
 ## License
 
-[MIT License](LICENSE).
+[MIT License](LICENSE.txt).
 
 ## Acknowledgments
 
